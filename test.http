@@ -1,0 +1,100 @@
+### Traer todas las criaturas
+GET http://localhost:3000/Criaturas
+
+###
+POST http://localhost:3000/Criaturas
+Content-Type: application/json
+
+{
+    "nombre": "Dragón",
+    "tipo": "Fuego",
+    "poder": 100,
+    "capturada": false
+}
+
+###
+PUT http://localhost:3000/Criaturas/5
+Content-Type: application/json
+
+{
+    "poder": 200
+}
+
+###
+DELETE http://localhost:3000/Criaturas/5
+
+###
+GET http://localhost:3000/Criaturas/5
+
+### 1. Obtener todos los objetos
+GET http://localhost:3000/objetos
+
+
+### 2. Obtener un objeto por ID
+GET http://localhost:3000/objetos/3
+
+
+### 3. Crear un objeto
+POST http://localhost:3000/objetos
+Content-Type: application/json
+
+{
+    "nombre": "Martillo de Guerra",
+    "tipo": "Arma",
+    "valor": 700,
+    "equipado": false
+}
+
+
+### 4. Actualizar un objeto
+PUT http://localhost:3000/objetos/6
+Content-Type: application/json
+
+{
+    "nombre": "Martillo de Guerra Mejorado",
+    "tipo": "Arma",
+    "valor": 1000,
+    "equipado": true
+}
+
+
+### 5. Eliminar un objeto
+DELETE http://localhost:3000/objetos/6
+
+
+### 6. Filtrar objetos por tipo
+GET http://localhost:3000/objetos/filtrar?tipo=Arma
+
+### 7. Obtener todos los hechizos
+GET http://localhost:3000/hechizos
+
+### Obtener un hechizo por ID
+GET http://localhost:3000/hechizos/3
+
+### Crear un hechizo
+POST http://localhost:3000/hechizos
+Content-Type: application/json
+
+{
+    "nombre": "Rayo Arcano",
+    "escuela": "Evocación",
+    "mana_requerido": 40,
+    "aprendido": false
+}
+
+### Actualizar un hechizo
+PUT http://localhost:3000/hechizos/5
+Content-Type: application/json
+
+{
+    "nombre": "Rayo Arcano Mejorado",
+    "escuela": "Evocación",
+    "mana_requerido": 50,
+    "aprendido": true
+}
+
+### Eliminar un hechizo
+DELETE http://localhost:3000/hechizos/5
+
+### Filtrar hechizos por escuela
+GET http://localhost:3000/hechizos/filtrar?escuela=Evocación
